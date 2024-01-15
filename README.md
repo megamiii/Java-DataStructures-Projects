@@ -302,3 +302,142 @@ PRINT_TREE:
 GET MIN: cats_on_catnip
 GET MAX: true_romance
 ```
+
+## 3. HybridSort
+### Project Description
+The `HybridSort` introduces a sorting solution that merges the quicksort and insertion sort algorithms to optimize performance. The hybrid sorting algorithm starts with quicksort and switches to insertion sort when subarrays reach a size threshold. This approach leverages the efficiency of quicksort for large datasets and the effectiveness of insertion sort for small partitions.
+
+### Features
+- **Hybrid Sorting Algorithm:** Combines quicksort and insertion sort for improved sorting performance.
+- **Subarray Threshold:** Switches from quicksort to insertion sort when subarrays reach a size of 32.
+- **Performance Optimized:** Tailored to offer better average-case performance on typical datasets.
+- **Problem Solving:** Applies the hybrid sorting algorithm to solve a variety of problems, including finding k-th smallest elements and merging two unsorted arrays.
+
+### Repository Structure Overview
+```bash
+HybridSort/
+│
+├── src/
+│   ├── sort/
+│   │   ├── HybridSorter.java    # Implements the hybrid sorting algorithm
+│   │   ├── QuickSorter.java     # Implements the quicksort portion
+│   │   ├── InsertionSorter.java # Implements the insertion sort portion
+│   │   └── Pair.java            # Data structure for key-value pairs
+│   └── Main.java                # Main program entry point
+│
+└── testcase/
+    ├── input.txt                # Sample input file for the program
+    └── output.txt               # Output file for sample input
+```
+
+### How to Use
+- **Sorting:** To sort an array of key-value pairs, create an instance of `HybridSorter` and call the `sort` method.
+- **K-th Smallest Element:** Use the `search` method of `HybridSorter` to find the k-th smallest element based on key comparison.
+- **Find Element by Key:** `searchKey` returns the position of an element by its key in a sorted array.
+- **Find First, Median, and Last Elements:** Use the `first`, `median`, and `last` methods to find respective elements after merging two unsorted arrays.
+
+### Compilation and Execution
+Compile and run the program using the provided `Main.java`, which handles input and output automatically. Ensure to compile all `.java` files in the src/sort directory and run the `Main` class without modifying it.
+
+For example:
+```bash
+# Navigate to the project root directory
+cd HybridSort
+
+# Compile the Java files and output the class files to the default directory
+javac src/sort/*.java src/Main.java
+
+# Run the Main class with the provided input.txt file
+java -cp src Main < testcase/input.txt > testcase/output.txt
+```
+
+### Sample Input and Output
+The `HybridSort` accepts a series of commands to perform operations on the array of pairs. Below are examples of commands you might input into the system, along with the expected output for each.
+
+*Sample Input:*
+```
+n 6
+append apple 3
+append coconut 5
+append strawberry 1
+append durian 2
+append banana 4
+append watermelon 6
+print 0
+print 1
+print 2
+search 1
+searchKey apple
+search 2
+searchKey durian
+sort
+print 0
+print 1
+print 2
+searchKey coconut
+n 3 3
+append apple 1
+append coconut 2
+append strawberry 3
+append durian 4
+append banana 5
+append watermelon 6
+median
+first
+n 2 3
+append apple 1
+append coconut 2
+append strawberry 3
+append durian 4
+append banana 5
+first
+median
+last
+```
+
+*Sample Output:*
+```
+apple
+coconut
+strawberry
+durian
+banana
+watermelon
+Print: 0 apple 3
+Print: 1 coconut 5
+Print: 2 strawberry 1
+Search: 1 apple 3
+searchKey: 1 apple
+Search: 2 banana 4
+searchKey: 4 durian
+Sorted
+Print: 0 apple 3
+Print: 1 banana 4
+Print: 2 coconut 5
+searchKey: 3 coconut
+n1: 3 n2: 3
+apple
+coconut
+strawberry
+durian
+banana
+watermelon
+Median: coconut-durian 2-4
+First: apple 1
+n1: 2 n2: 3
+apple
+coconut
+strawberry
+durian
+banana
+First: apple 1
+Median: coconut 2
+Last: strawberry 3
+```
+
+The sample output will correspond to the operations performed by the hybrid sorting algorithm, as demonstrated in the given input file.
+
+### Additional Notes
+- The program is designed to handle up to 1,000,000 key-value pairs.
+- All keys are unique and should be provided in lowercase without spaces.
+- This implementation is optimized for large datasets, ensuring time complexity is maintained in the worst case, with better performance in the best case.

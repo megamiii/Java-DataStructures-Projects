@@ -19,19 +19,10 @@ public class Main {
         String filePath;
 
         try {
-            /*
-            Release filepath
-            This will be used for evaluation
-            (Recommended) Test using the following command:
-                java -classpath <jar-file> Main <path-to-sample-input>
-             */
+            // Release filepath
             filePath = args[0];
         } catch (ArrayIndexOutOfBoundsException e) {
-            /*
-            Debug filepath
-            If FileNotFoundException occurs replace "sample_input.txt" with your sample_input absolute path
-                Ex) "sample_input.txt" -> "/Users/hongildong/Documents/PA04/resources/sample_input.txt"
-            */
+            // Debug filepath
             filePath = "sample_input.txt";
         }
 
@@ -50,26 +41,21 @@ public class Main {
                     c1 = Integer.parseInt(lineSplit[1]);
                     c2 = Integer.parseInt(lineSplit[2]);
                     c3 = Integer.parseInt(lineSplit[3]);
-                    //TODO: fill your code
                     hashTable.create(c1, c2, c3);
                     break;
                 case INSERT:
                     key = Integer.parseInt(lineSplit[1]);
-                    //TODO: fill your code
                     hashTable.insert(key);
                     break;
                 case DELETE:
                     key = Integer.parseInt(lineSplit[1]);
-                    //TODO: fill your code
                     hashTable.delete(key);
                     break;
                 case SEARCH:
                     key = Integer.parseInt(lineSplit[1]);
-                    //TODO: fill your code
                     hashTable.search(key);
                     break;
                 case PROBE:
-                    //TODO: fill your code
                     hashTable.maxProbe();
                     break;
             }

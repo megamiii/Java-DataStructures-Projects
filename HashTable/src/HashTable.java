@@ -6,12 +6,10 @@ public class HashTable {
     private int tableSize;
 
     public HashTable(int n) {
-        // TODO: fill your code
         tableSize = n;
     }
 
     public void create(int c1, int c2, int c3) {
-        // TODO: fill your code
         this.c1 = c1;
         this.c2 = c2;
         this.c3 = c3;
@@ -24,7 +22,6 @@ public class HashTable {
     }
 
     public void insert(int key) {
-        // TODO: fill your code
         int prob, i = 0;
         while (true) {
             prob = quadProb(key, i);
@@ -38,7 +35,6 @@ public class HashTable {
     }
 
     public void delete(int key) {
-        // TODO: fill your code
         int prob, i = 0;
         while (true) {
             prob = quadProb(key, i);
@@ -56,7 +52,6 @@ public class HashTable {
     }
 
     public void search(int key) {
-        // TODO: fill your code
         int prob, i = 0;
         while (true) {
             prob = quadProb(key, i);
@@ -73,7 +68,6 @@ public class HashTable {
     }
 
     public void maxProbe() {
-        // TODO: fill your code
         int maxProbes = 1;
         for (int i = 0; i < tableSize; i++) {
             int cnt = 0;
@@ -90,7 +84,6 @@ public class HashTable {
     }
 
     private int quadProb(int k, int i) {
-        // TODO: fill your code
         return ((k % tableSize) + c1*i*i + c2*i + c3) % tableSize;
     }
 }

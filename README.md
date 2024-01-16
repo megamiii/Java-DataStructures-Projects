@@ -1,6 +1,39 @@
 # Java-DataStructures-Projects
 This repository showcases a collection of my projects and implementations related to data structures and algorithms in Java.
 
+- [Java-DataStructures-Projects](#java-datastructures-projects)
+  - [1. JavaStackQueue](#1-javastackqueue)
+    - [Project Description](#project-description)
+    - [Repository Structure Overview](#repository-structure-overview)
+    - [Data Structures](#data-structures)
+    - [Problem Solvers](#problem-solvers)
+    - [Main Execution (`Main.java`)](#main-execution-mainjava)
+    - [I/O Examples](#io-examples)
+    - [Compilation and Execution](#compilation-and-execution)
+    - [Notes](#notes)
+  - [2. BSTBookFinder](#2-bstbookfinder)
+    - [Project Description](#project-description-1)
+    - [Features](#features)
+    - [Repository Structure Overview](#repository-structure-overview-1)
+    - [How to Use](#how-to-use)
+    - [Implementation Details](#implementation-details)
+    - [Compilation and Execution](#compilation-and-execution-1)
+    - [Sample Input and Output](#sample-input-and-output)
+  - [3. HybridSort](#3-hybridsort)
+    - [Project Description](#project-description-2)
+    - [Features](#features-1)
+    - [Repository Structure Overview](#repository-structure-overview-2)
+    - [How to Use](#how-to-use-1)
+    - [Compilation and Execution](#compilation-and-execution-2)
+    - [Sample Input and Output](#sample-input-and-output-1)
+    - [Additional Notes](#additional-notes)
+  - [HashTable](#hashtable)
+    - [Description](#description)
+    - [Repository Structure Overview](#repository-structure-overview-3)
+    - [How to Use](#how-to-use-2)
+    - [Compilation and Execution](#compilation-and-execution-3)
+    - [Sample Input and Output](#sample-input-and-output-2)
+
 ## 1. JavaStackQueue
 ### Project Description
 JavaStackQueue is a Java-based implementation project aimed at demonstrating the practical applications of two fundamental data structures: Stack and Queue. Through this project, we showcase their uses in solving real-world problems such as determining visible buildings in a skyline (BuildingSeer) and managing the queue in a restaurant (Restaurant).
@@ -441,3 +474,76 @@ The sample output will correspond to the operations performed by the hybrid sort
 - The program is designed to handle up to 1,000,000 key-value pairs.
 - All keys are unique and should be provided in lowercase without spaces.
 - This implementation is optimized for large datasets, ensuring time complexity is maintained in the worst case, with better performance in the best case.
+
+## HashTable
+
+### Description
+The HashTable project implements a hash table using quadratic probing for collision resolution. It includes the following operations: create, insert, delete, search, and maxProbe. The hash table is designed to handle a large number of entries with efficient collision handling.
+
+### Repository Structure Overview
+
+```bash
+HashTableProject/
+│
+├── src/                  # Source files for the HashTable implementation
+│   ├── HashTable.java    # The HashTable class with quadratic probing
+│   └── Main.java         # Main class for demonstrating HashTable usage
+│
+├── bin/                  # Compiled bytecode files (not tracked by Git)
+│
+├── .gitignore            # Specifies intentionally untracked files to ignore
+│
+├── sample_input.txt      # Sample input for testing the HashTable program
+├── sample_output.txt     # Sample output for validating the program's functionality
+│
+└── README.md             # Documentation and overview of the project
+```
+
+### How to Use
+- **Create**: Initialize the hash table with given constants for the quadratic probing collision resolution policy.
+- **Insert**: Add a key to the hash table.
+- **Delete**: Remove a key from the hash table, using -1 as a tombstone.
+- **Search**: Find the index of a key in the hash table.
+- **MaxProbe**: Determine the maximum number of probes that have occurred during an insertion.
+
+### Compilation and Execution
+To compile and run the HashTable project, navigate to the project directory and use the following commands:
+
+```bash
+javac src/HashTable.java src/Main.java
+java -cp src Main
+```
+
+### Sample Input and Output
+*Sample Input:*
+```
+create 1 1 1
+insert 100
+insert 200
+insert 1000
+insert 2000
+search 100
+search 200
+search 1000
+search 2000
+delete 100
+search 100
+search 200
+maxProbe
+```
+
+*Sample Output:*
+```
+INSERT: 100, INDEX: 101
+INSERT: 200, INDEX: 201
+INSERT: 1000, INDEX: 478
+INSERT: 2000, INDEX: 432
+SEARCH: 100, INDEX: 101
+SEARCH: 200, INDEX: 201
+SEARCH: 1000, INDEX: 478
+SEARCH: 2000, INDEX: 432
+DELETE: 100, INDEX: 101
+Failed to find 100
+SEARCH: 200, INDEX: 201
+Maximum number of probes: 2
+```

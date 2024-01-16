@@ -7,7 +7,7 @@ This repository showcases a collection of my projects and implementations relate
     - [Repository Structure Overview](#repository-structure-overview)
     - [Data Structures](#data-structures)
     - [Problem Solvers](#problem-solvers)
-    - [Main Execution (`Main.java`)](#main-execution-mainjava)
+    - [Main Execution](#main-execution)
     - [I/O Examples](#io-examples)
     - [Compilation and Execution](#compilation-and-execution)
     - [Notes](#notes)
@@ -69,7 +69,7 @@ We have two problem-solving classes that utilize the implemented data structures
 - `BuildingSeer`: Determines how many buildings from a sequence are visible when taller buildings can block the view of shorter ones.
 - `Restaurant`: Manages a queue of customers in a restaurant, reporting the last customer served and the maximum length of the queue during service.
 
-### Main Execution (`Main.java`)
+### Main Execution
 The `Main` class is responsible for interfacing with the user, handling file I/O for inputs and outputs, and invoking the appropriate data structure methods based on the commands read from the input files.
 
 ### I/O Examples

@@ -1,6 +1,39 @@
 # Java-DataStructures-Projects
 This repository showcases a collection of my projects and implementations related to data structures and algorithms in Java.
 
+- [Java-DataStructures-Projects](#java-datastructures-projects)
+  - [1. JavaStackQueue](#1-javastackqueue)
+    - [Project Description](#project-description)
+    - [Repository Structure Overview](#repository-structure-overview)
+    - [Data Structures](#data-structures)
+    - [Problem Solvers](#problem-solvers)
+    - [Main Execution (`Main.java`)](#main-execution-mainjava)
+    - [I/O Examples](#io-examples)
+    - [Compilation and Execution](#compilation-and-execution)
+    - [Notes](#notes)
+  - [2. BSTBookFinder](#2-bstbookfinder)
+    - [Project Description](#project-description-1)
+    - [Features](#features)
+    - [Repository Structure Overview](#repository-structure-overview-1)
+    - [How to Use](#how-to-use)
+    - [Implementation Details](#implementation-details)
+    - [Compilation and Execution](#compilation-and-execution-1)
+    - [Sample Input and Output](#sample-input-and-output)
+  - [3. HybridSort](#3-hybridsort)
+    - [Project Description](#project-description-2)
+    - [Features](#features-1)
+    - [Repository Structure Overview](#repository-structure-overview-2)
+    - [How to Use](#how-to-use-1)
+    - [Compilation and Execution](#compilation-and-execution-2)
+    - [Sample Input and Output](#sample-input-and-output-1)
+    - [Additional Notes](#additional-notes)
+  - [HashTable](#hashtable)
+    - [Description](#description)
+    - [Repository Structure Overview](#repository-structure-overview-3)
+    - [How to Use](#how-to-use-2)
+    - [Compilation and Execution](#compilation-and-execution-3)
+    - [Sample Input and Output](#sample-input-and-output-2)
+
 ## 1. JavaStackQueue
 ### Project Description
 JavaStackQueue is a Java-based implementation project aimed at demonstrating the practical applications of two fundamental data structures: Stack and Queue. Through this project, we showcase their uses in solving real-world problems such as determining visible buildings in a skyline (BuildingSeer) and managing the queue in a restaurant (Restaurant).

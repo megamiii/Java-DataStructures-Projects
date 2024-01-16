@@ -441,3 +441,76 @@ The sample output will correspond to the operations performed by the hybrid sort
 - The program is designed to handle up to 1,000,000 key-value pairs.
 - All keys are unique and should be provided in lowercase without spaces.
 - This implementation is optimized for large datasets, ensuring time complexity is maintained in the worst case, with better performance in the best case.
+
+## HashTable
+
+### Description
+The HashTable project implements a hash table using quadratic probing for collision resolution. It includes the following operations: create, insert, delete, search, and maxProbe. The hash table is designed to handle a large number of entries with efficient collision handling.
+
+### Repository Structure Overview
+
+```bash
+HashTableProject/
+│
+├── src/                  # Source files for the HashTable implementation
+│   ├── HashTable.java    # The HashTable class with quadratic probing
+│   └── Main.java         # Main class for demonstrating HashTable usage
+│
+├── bin/                  # Compiled bytecode files (not tracked by Git)
+│
+├── .gitignore            # Specifies intentionally untracked files to ignore
+│
+├── sample_input.txt      # Sample input for testing the HashTable program
+├── sample_output.txt     # Sample output for validating the program's functionality
+│
+└── README.md             # Documentation and overview of the project
+```
+
+### How to Use
+- **Create**: Initialize the hash table with given constants for the quadratic probing collision resolution policy.
+- **Insert**: Add a key to the hash table.
+- **Delete**: Remove a key from the hash table, using -1 as a tombstone.
+- **Search**: Find the index of a key in the hash table.
+- **MaxProbe**: Determine the maximum number of probes that have occurred during an insertion.
+
+### Compilation and Execution
+To compile and run the HashTable project, navigate to the project directory and use the following commands:
+
+```bash
+javac src/HashTable.java src/Main.java
+java -cp src Main
+```
+
+### Sample Input and Output
+*Sample Input:*
+```
+create 1 1 1
+insert 100
+insert 200
+insert 1000
+insert 2000
+search 100
+search 200
+search 1000
+search 2000
+delete 100
+search 100
+search 200
+maxProbe
+```
+
+*Sample Output:*
+```
+INSERT: 100, INDEX: 101
+INSERT: 200, INDEX: 201
+INSERT: 1000, INDEX: 478
+INSERT: 2000, INDEX: 432
+SEARCH: 100, INDEX: 101
+SEARCH: 200, INDEX: 201
+SEARCH: 1000, INDEX: 478
+SEARCH: 2000, INDEX: 432
+DELETE: 100, INDEX: 101
+Failed to find 100
+SEARCH: 200, INDEX: 201
+Maximum number of probes: 2
+```
